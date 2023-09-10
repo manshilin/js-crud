@@ -47,3 +47,16 @@
         }
     }
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+}
+
+.user-list {
+    li {
+        padding: 5px 15px;
+
+    }
+}
