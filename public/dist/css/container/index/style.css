@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+}
+.form__title {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+.form__content {
+  display: grid;
+  gap: 16px;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form__label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.form__input {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+.form__button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+.form__button:hover {
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
