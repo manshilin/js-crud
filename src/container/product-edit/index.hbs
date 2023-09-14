@@ -1,0 +1,88 @@
+
+  <section> 
+     <h1 class="form__title">Edit products</h1>
+    <div class="form shadow p-3 mb-5 bg-white rounded">
+      <form method="GET" action="/product-edit">
+  <div class="row">
+    <div class="col-4 form__field">
+        <label for="name" class="form__label"> Name: </label>
+        <input type="text" name="name" class="form__input" value="{{data.product.name}}">
+      </div>
+      <div class="col-4 form__field">
+        <label for="price" class="form__label"> Price: </label>
+        <input type="text" name="price" class="form__input" value="{{data.product.price}}">
+      </div>
+       <div class="col-4 form__field">
+        <label for="id" class="form__label" > ID: </label>
+        <input type="text" name="id" class="form__input" value="{{data.product.id}}">
+      </div>
+
+  </div>
+  <div class="row">
+     <div class="col-12 form__field">
+        <label for="discription" class="form__label"> Description: </label>
+        <input type="text" name="description" class="form__input" value="{{data.product.description}}">
+      </div>
+  </div>
+    
+      
+     
+      
+  </form>
+  <form method="POST" action="/product-edit" >
+  <div class="row">
+        <div class="col-6">
+          <a href="/product-edit?id={{id}}" class="btn btn-primary">Product Edit</a>
+        </div>
+        <div class="col-6">
+          <a href="/product-delete?id={{id}}" class="btn btn-danger">Product Delete</a>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+  </section>
+
+    <section> 
+     <h1 class="form__title">Edit products</h1>
+    <div class="form shadow p-3 mb-5 bg-white rounded">
+      <form method="POST" action="/product-edit">
+  <div class="row">
+    <div class="col-4 form__field">
+        <label for="name" class="form__label"> Name: </label>
+        <input type="text" name="name" class="form__input" value="{{data.product.name}}">
+      </div>
+      <div class="col-4 form__field">
+        <label for="price" class="form__label"> Price: </label>
+        <input type="text" name="price" class="form__input" value="{{data.product.price}}">
+      </div>
+       <div class="col-4 form__field">
+        <label for="id" class="form__label" > ID: </label>
+        <input type="text" name="id" class="form__input" value="{{data.product.id}}">
+      </div>
+
+  </div>
+  <div class="row">
+     <div class="col-12 form__field">
+        <label for="discription" class="form__label"> Description: </label>
+        <input type="text" name="description" class="form__input" value="{{data.product.description}}">
+      </div>
+  </div>
+    
+      
+     
+      <div class="row">
+        <div class="col-6">
+          <a href="/product-edit?id={{id}}" class="btn btn-primary">Product Edit</a>
+        </div>
+        <div class="col-6">
+          <a href="/product-delete?id={{id}}" class="btn btn-danger">Product Delete</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+  </section>
+
+ 

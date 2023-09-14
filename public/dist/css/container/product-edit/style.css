@@ -1,14 +1,11 @@
 .form {
+  margin: 32px auto;
   display: flex;
   flex-direction: column;
+  height: 40%;
+  width: 90%;
   gap: 16px;
   padding: 32px;
-}
-.form__title {
-  font-size: 20px;
-  font-weight: bold;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
 }
 .form__content {
   display: flex;
@@ -24,19 +21,26 @@
 .form__label {
   font-size: 14px;
   font-weight: bold;
+  margin-top: 16px;
 }
 .form__input {
   padding: 8px;
   border: 1px solid #ddd;
   gap: 8px;
 }
-.form__button {
-  padding: 24px;
-  width: 100%;
-  border-radius: 20px;
+
+.form__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: blue;
+  padding: 40px;
+  text-align: left;
+  margin-left: 32px;
 }
-.form__button:hover {
-  background-color: white;
+
+.btn {
+  width: 100%;
+  margin-top: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */
