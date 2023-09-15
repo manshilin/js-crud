@@ -7,8 +7,8 @@
             <mark>There are no products</mark>
             {{else}}
                 {{#each list}}
-                {{!-- {{> product-card}} --}}
-                <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                {{> product-card}}
+                {{!-- {{!-- <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
         <div class="card__body">
         <h5 class="card__title">{{name}}</h5>
         <p class="card__text">{{description}}</p>
@@ -17,10 +17,10 @@
 
         <a href="/product-edit?id={{id}}" class="card__batton btn btn-primary">Updated</a>
     </div>
-</div>
-                {{/each}}
+</div>--}}
+             {{/each}} 
             {{/if}}
             {{/with}}
         </div>
     </div>
-</section>
+</section> 
