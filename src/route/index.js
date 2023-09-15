@@ -179,8 +179,8 @@ router.post('/product-create', function (req, res) {
   const { name, price, description} = req.body
   const product = new Product(name, price, description)
   Product.addProduct(product)
-  res.render('alert', {
-    style: 'alert',
+  res.render('product-alert', {
+    style: 'product-alert',
     info: 'Product was created successfully!',
   })
 })
@@ -224,41 +224,60 @@ router.get('/product-edit', function (req, res) {
 //===================================================================
 
 // Handle POST request for updating the product
+// router.post('/product-edit', function (req, res) {
+//   const { name, price, description, id } = req.body;
+//   const existingProduct = Product.getById(Number(id));
+
+//   if (!existingProduct) {
+//     res.render('product-edit', {
+//       style: 'product-edit',
+//       data: {
+//         product: null,
+//         message: 'Product not found',
+//       },
+//     });
+//     return;
+//   }
+
+//   const updatedData = {};
+//   if (name) updatedData.name = name;
+//   if (price) updatedData.price = price;
+//   if (description) updatedData.description = description;
+
+//   Product.updateById(Number(id), updatedData);
+//   const list = Product.getList()
+
+//   // Redirect to the GET /product-edit route to display the updated product
+//   res.redirect('/product-edit?id=' + id);
+
+// });
+
 router.post('/product-edit', function (req, res) {
-  const { name, price, description, id } = req.body;
-  const existingProduct = Product.getById(Number(id));
-
-  if (!existingProduct) {
-    res.render('product-edit', {
-      style: 'product-edit',
-      data: {
-        product: null,
-        message: 'Product not found',
-      },
-    });
-    return;
+  // res.render генерує нам HTML сторінку
+  const { id, name, price, description } = req.body
+  const product = Product.updateById(Number(id), {
+    name,
+    price,
+    description,
+  })
+  console.log(id)
+  console.log(product)
+  if (product) {
+    // ↙️ cюди вводимо назву файлу з сontainer
+    res.render('product-alert', {
+      // вказуємо назву папки контейнера, в якій знаходяться наші стилі
+      style: 'product-alert',
+      info: 'Інформація про товар оновлена',
+    })
+  } else {
+    // ↙️ cюди вводимо назву файлу з сontainer
+    res.render('product-alert', {
+      // вказуємо назву папки контейнера, в якій знаходяться наші стилі
+      style: 'product-alert',
+      info: 'Сталася помилка',
+    })
   }
-
-  const updatedData = {};
-  if (name) updatedData.name = name;
-  if (price) updatedData.price = price;
-  if (description) updatedData.description = description;
-
-  Product.updateById(Number(id), updatedData);
-  const list = Product.getList()
-
-  // Redirect to the GET /product-edit route to display the updated product
-  res.redirect('/product-edit?id=' + id, {
-    style: 'product-edit',
-    data: {
-      list,
-    },
-  });
-
-});
-
-
+  // ↑↑ сюди вводимо JSON дані
+})
 // ================================================================
 module.exports = router
-
-

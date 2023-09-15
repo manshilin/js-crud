@@ -4,7 +4,7 @@
     margin: s.space(8) auto;
     display: flex;
     flex-direction: column;
-    height: 40%;
+    height: 70%;
     width: 90%;
     gap: s.space(4);
     padding: s.space(8);
@@ -37,19 +37,20 @@
             gap: s.space(2);
             
     }
+    &__title {
+        font-size: 26px;
+        font-weight: bold;
+        color: blue;
+        padding: s.space(4); 
+        text-align: left;
+        
+    }
 
   
     
 }
 
-.form__title {
-    font-size: 36px;
-    font-weight: bold;
-    color: blue;
-    padding: s.space(10); 
-    text-align: left;
-    margin-left: s.space(8);
-}
+
 
 .btn {
     width: 100%;
