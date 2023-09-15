@@ -77,17 +77,23 @@ class Product {
 static getById = (id) => {
   return this.#list.find((product) => product.id === id)
 }
-// updateById (id, data) Оновлює властивості аргументу data в об’єкт товару, який був знайдений по ID. Можна
-// оновлювати price, name, description
+
 static updateById = (id, data) => {
   const index = this.#list.findIndex((product) => product.id === id)
   if (index !== -1) {
     this.#list[index] = {...this.#list[index], ...data}
+    return true
   }
  }
 //deleteById(id) Видаляє товар по його ID зі списку створених товарів
-static deleteById = (id) => {
-  this.#list = this.#list.filter((product) => product.id !== id)
+static deleteById(id) {
+  const index = this.#list.findIndex((product) => product.id === id)
+  if (index !== -1) {
+    this.#list.splice(index, 1); // Видалення за допомогою splice
+    return  true;
+  } else {
+    return  false;
+  }
 }
 
 }
@@ -223,35 +229,6 @@ router.get('/product-edit', function (req, res) {
 });
 //===================================================================
 
-// Handle POST request for updating the product
-// router.post('/product-edit', function (req, res) {
-//   const { name, price, description, id } = req.body;
-//   const existingProduct = Product.getById(Number(id));
-
-//   if (!existingProduct) {
-//     res.render('product-edit', {
-//       style: 'product-edit',
-//       data: {
-//         product: null,
-//         message: 'Product not found',
-//       },
-//     });
-//     return;
-//   }
-
-//   const updatedData = {};
-//   if (name) updatedData.name = name;
-//   if (price) updatedData.price = price;
-//   if (description) updatedData.description = description;
-
-//   Product.updateById(Number(id), updatedData);
-//   const list = Product.getList()
-
-//   // Redirect to the GET /product-edit route to display the updated product
-//   res.redirect('/product-edit?id=' + id);
-
-// });
-
 router.post('/product-edit', function (req, res) {
   // res.render генерує нам HTML сторінку
   const { id, name, price, description } = req.body
@@ -267,17 +244,38 @@ router.post('/product-edit', function (req, res) {
     res.render('product-alert', {
       // вказуємо назву папки контейнера, в якій знаходяться наші стилі
       style: 'product-alert',
-      info: 'Інформація про товар оновлена',
+      info: 'Product information updated',
     })
   } else {
     // ↙️ cюди вводимо назву файлу з сontainer
     res.render('product-alert', {
       // вказуємо назву папки контейнера, в якій знаходяться наші стилі
       style: 'product-alert',
-      info: 'Сталася помилка',
+      info: 'Oops! Something went wrong.',
     })
   }
   // ↑↑ сюди вводимо JSON дані
 })
 // ================================================================
+router.get('/product-delete', function (req, res) {
+  const { id } = req.query;
+  const result = Product.deleteById(Number(id))
+  if (result) {
+
+     const list = Product.getList()
+  res.render('product-alert', {
+    style: 'product-alert',
+    info: 'Product was deleted!'
+  });
+  } else {
+    res.render('product-alert', {
+      // вказуємо назву папки контейнера, в якій знаходяться наші стилі
+      style: 'product-alert',
+      info: 'Oops! Something went wrong.',
+    })
+
+  }
+});
+
+//=====================================================================
 module.exports = router

@@ -1,15 +1,10 @@
-{{#with data.products}}
-            {{#if isEmpty}}
-            <mark>There are no products</mark>
-            {{else}}
-            <ul>
-                {{#each list}}
-                    <li> {{name}} </li>
-                    <li>{{description}}</li>
-                    <li>{{id}}</li>
-                    <li>{{price}}</li>
-                    <li><a href="/product-update/{{id}}">Update</a></li>
-                {{/each}}
-            </ul>
-            {{/if}}
- {{/with}}
+<div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+    <div class="card__body">
+        <h5 class="card__title">{{name}}</h5>
+        <p class="card__text">{{description}}</p>
+        <p class="card__id">ID: {{id}}</p>
+        <p class="card__price">{{price}}$</p>
+
+        <a href="/product-edit?id={{id}}" class="card__batton btn btn-primary">Updated</a>
+    </div>
+</div>

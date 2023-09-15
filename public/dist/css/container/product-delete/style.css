@@ -1,0 +1,44 @@
+.form {
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 90%;
+  gap: 16px;
+  padding: 32px;
+}
+.form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px;
+}
+.form__label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.form__input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  gap: 8px;
+}
+.form__title {
+  font-size: 26px;
+  font-weight: bold;
+  color: blue;
+  padding: 16px;
+  text-align: left;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 32px;
+}
+
+/*# sourceMappingURL=style.css.map */
