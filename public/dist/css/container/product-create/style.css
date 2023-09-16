@@ -30,15 +30,5 @@
   border: 1px solid #ddd;
   gap: 8px;
 }
-.form__button {
-  padding: 24px;
-  color: whitesmoke;
-  width: 100%;
-  border-radius: 20px;
-  background-color: rgb(66, 72, 231);
-}
-.form__button:hover {
-  background-color: rgb(0, 59, 207);
-}
 
 /*# sourceMappingURL=style.css.map */

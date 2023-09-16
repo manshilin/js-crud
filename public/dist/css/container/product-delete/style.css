@@ -1,14 +1,11 @@
 .form {
+  margin: 32px auto;
   display: flex;
   flex-direction: column;
+  height: 70%;
+  width: 90%;
   gap: 16px;
   padding: 32px;
-}
-.form__title {
-  font-size: 20px;
-  font-weight: bold;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
 }
 .form__content {
   display: flex;
@@ -24,21 +21,24 @@
 .form__label {
   font-size: 14px;
   font-weight: bold;
+  margin-top: 16px;
 }
 .form__input {
   padding: 8px;
   border: 1px solid #ddd;
   gap: 8px;
 }
-.form__button {
-  padding: 24px;
-  color: whitesmoke;
-  width: 100%;
-  border-radius: 20px;
-  background-color: rgb(66, 72, 231);
+.form__title {
+  font-size: 26px;
+  font-weight: bold;
+  color: blue;
+  padding: 16px;
+  text-align: left;
 }
-.form__button:hover {
-  background-color: rgb(0, 59, 207);
+
+.btn {
+  width: 100%;
+  margin-top: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */
