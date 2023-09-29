@@ -1,0 +1,96 @@
+/* Стилі для заголовка */
+@use "../../component/divider/style.scss" as divider;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 20px;
+}
+
+.details-title-1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: blue;
+  }
+  
+  /* Стилі для ID */
+  .details-id {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .details-title-2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .details-id h3 {
+    font-size: 18px;
+  }
+  
+ 
+
+  /* Стилі для інформації про покупця */
+  .purchase-buyer__info {
+    display: grid;
+    grid-template-columns: repeat(2,  1fr 1fr);
+    grid-gap: 20px;
+    margin-bottom: 20px;
+
+  }
+  
+  .purchase-buyer__info p {
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  /* Стилі для інформації про продукт */
+  .purchase-product__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    
+  }
+  
+  .purchase-product__info p {
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  /* Стилі для інформації про статус та ціни */
+  .purchase-status__info {
+    display: grid;
+    grid-template-columns: repeat(2,  1fr 1fr);
+    margin-bottom: 20px;
+
+  }
+  
+  .purchase-status__info p {
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  /* Стилі для кнопки "Змінити данні" */
+  .btn.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #0056b3;
+  }

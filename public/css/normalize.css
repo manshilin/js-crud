@@ -8,8 +8,11 @@
 
 html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+  html {
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    text-size-adjust: 100%; /* 2 */
+  }
 
 /* Sections
    ========================================================================== */
@@ -29,7 +32,60 @@ body {
 main {
   display: block;
   -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox */
+  /* Firefox */
+  /* Hide scrollbar */
+  /* Hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  /* Hide scrollbar */
+  /* Hide scrollbar */
+  /* Hide scrollbar */
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+  overflow: scroll !important; /* Everything else */
+  &::-webkit-scrollbar {
+    display: none; /* Webkit */
+  }
+  &::-webkit-scrollbar {
+    display: none; /* Webkit */
+  }
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  /* Webkit */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+  overflow: scroll !important; /* Everything else */
+  &::-webkit-scrollbar {
+    display: none; /* Webkit */
+  }
+  &::-webkit-scrollbar {
+    display: none; /* Webkit */
+  }
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  /* Webkit */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+  overflow: -moz-scrollbars-none; /* Old Firefox */
+  overflow: -moz-scrollbars-none; /* Everything else */
+  &::-webkit-scrollbar {
+    display: none; /* Webkit */
+  }
+  &::-webkit-scrollbar {
+    display: none; /* Webkit */
+  }
+  -ms-overflow-style: none;
+  overflow: scroll !important;
+  /* Webkit */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /**
@@ -207,6 +263,7 @@ button,
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -299,6 +356,7 @@ textarea {
 
 [type='search'] {
   -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
@@ -630,11 +688,13 @@ input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
 }
 
 input[type='search'] {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -666,6 +726,10 @@ html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 a:active,
@@ -727,6 +791,7 @@ html input[type='button'],
 input[type='reset'],
 input[type='submit'] {
   -webkit-appearance: button;
+  appearance: button;
   cursor: pointer;
 }
 
@@ -743,6 +808,7 @@ input[type='radio'] {
 
 input[type='search'] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -896,11 +962,18 @@ input::-webkit-outer-spin-button {
 }
 
 input[type='number'] {
-  -moz-appearance: textfield;
-  -webkit-appearance: unset;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  input {
+    -webkit-appearance: unset;
+    appearance: unset;
+  }
 }
 
 input:-webkit-autofill {
   -webkit-box-shadow: none;
   box-shadow: none;
+}
 }

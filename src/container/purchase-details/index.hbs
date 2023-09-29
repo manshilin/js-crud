@@ -1,0 +1,42 @@
+<div class="main">
+    <h1 class="details-title-1">
+        Інформація про замовлення
+    </h1>
+    <div class="details-id">
+        <h2 class="details-title-2">
+            ID:
+        </h2>
+        <h3>{{data.purchase.id}}</h3>
+    </div>
+    {{> divider}}
+    <div class="purchase-buyer__info">
+        <p><strong>Ім'я:</strong></p>
+        <p>{{data.purchase.firstName}}</p>
+        <p><strong>Прізвище:</strong></p>
+        <p>{{data.purchase.lastName}}</p>
+        <p><strong>Телефон:</strong></p>
+        <p>{{data.purchase.phone}}</p>
+        <p><strong>Email:</strong></p>
+        <p>{{data.purchase.email}}</p>
+    </div>
+    {{> divider}}
+    <div class="purchase-product__info">
+        <p><strong>Продукт:</strong></p>
+        <p>{{data.purchase.product.title}}</p>
+        <p><strong>Коментар:</strong></p>
+        <p>{{data.purchase.comment}}</p>
+    </div>
+    {{> divider}}
+    <div class="purchase-status__info">
+        <p><strong>Ціна продукту:</strong></p>
+        <p>{{data.purchase.productPrice}}, грн.</p>
+        <p><strong>Ціна доставки:</strong></p>
+        <p>{{data.purchase.deliveryPrice}}, грн.</p>
+        <p><strong>Сума до сплати:</strong></p>
+        <p>{{data.purchase.totalPrice}}, грн.</p>
+        <p><strong>Нараховані бонуси:</strong></p>
+        <p>{{data.purchase.bonus}}</p>
+    </div>
+    {{> divider}}
+    <a class="btn btn-primary" href="/purchase-edit?id={{data.purchase.id}}">Змінити данні</a>
+</div>

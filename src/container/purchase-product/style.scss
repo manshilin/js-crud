@@ -1,0 +1,75 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/heading/style.scss' as product;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider; 
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+    padding: s.space(10);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(4);
+    align-items: flex-start;
+}
+
+.product-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: s.space(4);
+}
+
+
+.product-info__image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+.product-info__title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-info__subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+}
+
+.product-info__category {
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.product-info__category--1 {
+    border-color: blue;
+    color: blue;
+}
+
+.product-info__category--2 {
+    border-color: green;
+    color: green;
+}
+
+.product-info__button {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: blue;
+    border: 1px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+    

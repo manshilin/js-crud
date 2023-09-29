@@ -1,0 +1,46 @@
+<section>
+ {{#with data}}
+  <form method='POST' action='/purchase-edit' class='form shadow p-3 mb-5 bg-white rounded'>
+    <h1 class='form__title'>Зміна данних</h1>
+
+     <div class='col-12 form__field'>
+        <label for='id' class='form__label'>
+          ID:
+        </label>
+        <input type='number' name='id' class='form__input__id' value='{{purchase.id}}' />
+      </div>
+
+    <div class='row'>
+      <div class='col-6 form__field'>
+        <label for='lastName' class='form__label'>
+          Прізвище:
+        </label>
+        <input type='text' name='lastName' class='form__input' value='{{purchase.lastName}}' />
+      </div>
+      <div class='col-6 form__field'>
+        <label for='firstName' class='form__label'>
+          І'мя:
+        </label>
+        <input type='text' name='firstName' class='form__input' value='{{purchase.firstName}}' />
+      </div>
+
+
+    </div>
+    <div class='row'>
+            <div class='col-6 form__field'>
+        <label for='email' class='form__label'> Електоронна пошта: </label>
+        <input type='email' name='email' class='form__input' value='{{purchase.email}}' />
+      </div>
+            <div class='col-6 form__field'>
+        <label for='telephone' class='form__label'> Телефон: </label>
+        <input type='number' name='telephone' class='form__input' value='{{purchase.phone}}' />
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-12'>
+        <button class='btn btn-primary'>Зберегти зміни</button>
+      </div>
+    
+  </form>
+  {{/with}}
+</section>

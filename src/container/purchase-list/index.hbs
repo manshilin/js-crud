@@ -1,0 +1,33 @@
+<div class="main">
+  
+    <table>
+    <h1 class="purchase-list__title">
+        Мої замовлення
+    </h1>  
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Total Price</th>
+                <th>Bonus</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data.list}}
+            <tr>
+                <td> {{this.id}}</td>
+                <td><a href="/purchase-details?id={{this.id}} "> {{this.product}}</a></td>
+                <td>{{this.totalPrice}}</td>
+                <td>{{this.bonus}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+   
+    
+   
+
+
+    
+</div>

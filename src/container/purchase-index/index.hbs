@@ -1,0 +1,12 @@
+
+<div class="main">
+      {{> heading title="Товари" info="Комп'ютери та ноутбуки/Комп'ютери нет буки моноблоки"}}
+    <div class="product-list">
+         {{#each data.list}}
+            {{> purchase-product data = this}}
+        {{/each}}
+    
+    </div>
+
+</div>
+  
