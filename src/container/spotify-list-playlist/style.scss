@@ -1,0 +1,133 @@
+@use '../../lib/service.scss' as s;
+@use '../../lib/spotify.scss' as spotify;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: s.space(6) s.space(2);
+
+  &__header {
+    display: flex;
+
+    gap: s.space(2) s.space(4);
+    justify-content: space-around; /* Place title on the left and images on the right */
+
+    &__title {
+      color: #fffefe;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Inter;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      margin-right: auto;
+    }
+
+    &__img {
+      display: flex;
+      justify-items: center;
+      width: 92px;
+      height: 92px;
+      
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: s.space(7);
+    justify-content: center;
+  }
+}
+
+.content__card {
+  display: flex;
+  width: 345px;
+  height: 345px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card--1 {
+  background: linear-gradient(
+    135deg,
+    #4531f2 0.5%,
+    #cef4e7 100%
+  );
+  padding: 88px 88px 87px 87px;
+}
+.card--2 {
+  background: #2d1f16;
+  position: relative; /* Make the container a positioned parent */
+  padding: 20px; /* Додайте відступи за бажанням */
+
+  .rectangle {
+    width: 120px;
+    height: 16px;
+    background: #ea9003;
+    position: absolute;
+    bottom: 0px; /* Торкається низу */
+    left: 30px; /* Відступ 30px від лівого краю */
+  }
+
+  .mash {
+    color: #fffefe;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    position: absolute;
+    bottom: 36px; /* 20px вище ніж rectangle */
+    left: 30px; /* Відступ 30px від лівого краю */
+  }
+
+  .orange {
+    position: absolute;
+    top: 100px; /* 100px зверху від батьківського блоку */
+    left: 80px; /* 80px зліва від батьківського блоку */
+    z-index: 1; /* Встановіть z-index: 1, щоб зробити його поверх rectangle */
+  }
+
+  .yellow {
+    position: absolute;
+    top: 35px; /* 35px зверху від батьківського блоку */
+    left: 145px; /* 145px зліва від батьківського блоку */
+  }
+}
+
+
+.card--3 {
+  background: url(<path-to-image>),
+    lightgray 50% / cover no-repeat;
+}
+
+.card--4 {
+  background: #242424;
+}
+
+.main__content__card__title {
+  color: #fff;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+  margin: 20px 0;
+}
+
+.main__content__card__number {
+  color: #bdbdbd;
+
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+}

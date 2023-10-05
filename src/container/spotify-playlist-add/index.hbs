@@ -1,0 +1,28 @@
+<main class="main">
+    {{#with data}}
+    <div class="main__content">
+        
+   
+        Додай трек до плейлиста: {{name}}
+        
+    </div>
+       <ul class="track__list">
+        {{#each tracks}}
+        <li class="track">
+            <img src="{{this.image}}" alt="{{this.name}}">
+       
+        <div class="track__content">
+        <strong class="track__name">{{this.name}}</strong>
+        <em class="track__author">{{this.author}}</em>
+        </div> 
+        <a href="/spotify-add-track?playlistId={{../playlistId}}&trackId={{id}}">
+            <img src="/svg/add_button.svg" alt="">
+        </a>
+
+        </li>
+           
+        {{/each}}
+
+       </ul>
+    {{/with}}
+</main>
