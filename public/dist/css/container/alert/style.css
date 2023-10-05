@@ -1,0 +1,40 @@
+.alert__container {
+  width: 100%;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.alert__info {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.btn__alert {
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.batton-go-back {
+  border-radius: 50px;
+  width: 60%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.batton-go-back:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

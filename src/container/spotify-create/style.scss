@@ -1,0 +1,41 @@
+@use '../../lib/service.scss' as s;
+@use '../../lib/spotify.scss' as spotify;
+
+.title--small {
+    font-size: 20px;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(6);
+    align-items: center;
+}
+.form__field {
+    font-size: 64px;
+    width: 100%;
+    border-bottom: 1px solid #808080;
+    padding: s.space(4);
+    color: #A6A6A6;
+    text-align: center;
+}
+
+.form__button {
+    background: #20D562;
+    font-size: 20px;
+    max-width: -moz-fit-content; // Add vendor prefix for Firefox
+    max-width: fit-content;
+    padding: s.space(3) s.space(10);
+    border-radius: 50px;
+    color: black;
+    margin-top: 68px;
+    transition: opacity 0.6s;
+    &:hover {
+        opacity: 0.6;
+    }
+
+}
